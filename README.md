@@ -4,7 +4,7 @@
 
 validateTarget is a minimalist script to validate the target of an HTML element specially during event delegation. Event delegation is advised for better performance, read [MDN documentation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation) for more information.
 
-No needs to check `nodeName` or `className` properties, the function return a boolean when the target is correct. The target can have multiple node name if element shares common codes.
+No needs to check `nodeName` or `className` properties, the function return a boolean when the target is correct. The target can have multiple node name if element shares common code.
 
 ## Installation
 

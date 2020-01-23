@@ -27,7 +27,6 @@
 		"eslint-plugin-promise": "4.2.1",
 		"eslint-plugin-standard": "3.0.1",
 		"jest": "24.9.0",
-		"majestic": "1.6.1",
 		"markdownlint-cli": "0.21.0",
 		"prettier-eslint": "9.0.1"
 	},
