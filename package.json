@@ -7,6 +7,12 @@
 	"repository": "https://github.com/yoriiis/validate-target.git",
 	"license": "MIT",
 	"author": "Yoriiis aka Joris DANIEL",
+	"keywords": [
+		"validate target",
+		"event delegation",
+		"validate",
+		"utils"
+	],
 	"scripts": {
 		"coverage": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
 		"test": "jest",
