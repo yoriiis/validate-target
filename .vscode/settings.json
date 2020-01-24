@@ -3,16 +3,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
-    "[postcss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
     "editor.autoIndent": "none",
     "editor.formatOnSave": false,
     "editor.tabSize": 4,
-    "files.associations": {
-        "*.css": "postcss",
-    },
     "files.trimTrailingWhitespace": true,
     "javascript.format.enable": false,
     "javascript.validate.enable": false,

@@ -2,7 +2,7 @@
 
 ![validateTarget](https://img.shields.io/badge/validate--target-v1.0.0-546e7a.svg?style=for-the-badge) [![TravisCI](https://img.shields.io/travis/com/yoriiis/validate-target/master?style=for-the-badge)](https://travis-ci.com/yoriiis/validate-target) [![Coverage Status](https://img.shields.io/coveralls/github/yoriiis/validate-target?style=for-the-badge)](https://coveralls.io/github/yoriiis/validate-target?branch=master) ![Node.js](https://img.shields.io/node/v/validate-target?style=for-the-badge) [![Bundlephobia](https://img.shields.io/bundlephobia/minzip/validate-target?style=for-the-badge)](https://bundlephobia.com/result?p=fela@latest)
 
-validateTarget is a minimalist script to validate the target of an HTML element specially during event delegation. Event delegation is advised for better performance, read [MDN documentation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation) for more information.
+validateTarget is a minimalist script to easily validate target of an HTML element especially during event delegation. Event delegation is advised for better performance, read [MDN documentation](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation) for more information.
 
 No needs to check `nodeName` or `className` properties, the function return a boolean when the target is correct. The target can have multiple node name if element shares common code.
 
@@ -46,7 +46,7 @@ The following example return `true` because `button` is a granted value for `nod
 
 ```html
 <a href="" class="itemLink">Link</a>
-<button class="itemButton">Link</button>
+<button class="itemButton">Button</button>
 ```
 
 ```javascript
