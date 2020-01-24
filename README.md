@@ -20,7 +20,7 @@ yarn add --dev validate-target
 
 ## Environment
 
-`validateTarget` was built for Node.js `>=8.x`.
+`validateTarget` was built for Node.js `>=8.11.2`.
 
 ## Usage
 
