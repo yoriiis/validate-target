@@ -1,5 +1,6 @@
 .github/
 .vscode/
+coverage
 .editorconfig
 .eslintignore
 .eslintrc.js
@@ -8,4 +9,4 @@
 .nvmrc
 .travis.yml
 babel.config.js
-prettier.Config.js
+prettier.config.js

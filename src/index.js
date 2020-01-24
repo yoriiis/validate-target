@@ -1,7 +1,7 @@
 /**
  * @license MIT
  * @name validateTarget
- * @version 1.0.0
+ * @version 1.0.1
  * @author: Yoriiis aka Joris DANIEL <joris.daniel@gmail.com>
  * @description: Easily validate target of an HTML element especially during event delegation
  * {@link https://github.com/yoriiis/validate-target}
