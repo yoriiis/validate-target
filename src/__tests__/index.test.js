@@ -2,19 +2,19 @@
 
 import validateTarget from '../index';
 
-describe('validateTarget function', () => {
-	beforeEach(() => {
-		document.body.innerHTML = `
-			<nav class="nav">
-				<ul class="list">
-					<li class="list-item">
-						<a href="" class="list-itemLink">Link</a>
-					</li>
-				</ul>
-			</nav>
-		`;
-	});
+beforeEach(() => {
+	document.body.innerHTML = `
+		<nav class="nav">
+			<ul class="list">
+				<li class="list-item">
+					<a href="" class="list-itemLink">Link</a>
+				</li>
+			</ul>
+		</nav>
+	`;
+});
 
+describe('validateTarget function', () => {
 	it('should init the validateTarget function with wrong nodeName parameter', () => {
 		const result = validateTarget({
 			target: document.querySelector('.list-itemLink'),
