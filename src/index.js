@@ -1,7 +1,7 @@
 /**
  * @license MIT
  * @name validateTarget
- * @version 1.0.1
+ * @version 2.0.0
  * @author: Yoriiis aka Joris DANIEL <joris.daniel@gmail.com>
  * @description: Easily validate target of an HTML element especially during event delegation
  * {@link https://github.com/yoriiis/validate-target}
@@ -10,24 +10,21 @@
 
 /**
  * @param {HTMLElement} target Target element
- * @param {String} className Class name
- * @param {Array} nodeName List of possible nodes name
+ * @param {String} selectorString Any valid CSS selector string (class, id, attribute) with Element.matches()
+ * @param {String || Array} nodeName List of possible nodes name
  *
  * @returns {Boolean} Is the target valid
  */
-module.exports = function validateTarget ({ target, className, nodeName }) {
-	let checkNodeName = false;
-
-	if (Array.isArray(nodeName) && nodeName.length) {
-		nodeName.forEach(nodeNameItem => {
-			if (
-				target.nodeName.toLowerCase() === nodeNameItem &&
-				target.classList.contains(className)
-			) {
-				checkNodeName = true;
-			}
-		});
+module.exports = function validateTarget ({ target, selectorString, nodeName }) {
+	// If nodeName is a string, transform it in array to reuse the same function
+	if (typeof nodeName === 'string') {
+		nodeName = [nodeName];
 	}
 
-	return target && checkNodeName;
+	// Check if at least one of the nodeName is valid
+	if (Array.isArray(nodeName) && nodeName.length) {
+		return nodeName
+			.map(item => target.nodeName.toLowerCase() === item && target.matches(selectorString))
+			.includes(true);
+	}
 };
