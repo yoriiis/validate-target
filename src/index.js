@@ -1,8 +1,8 @@
 /**
- * @param {HTMLElement} target Target element
- * @param {String} selectorString Any valid CSS selector string (class, id, attribute) with Element.matches()
- * @param {String || Array} nodeName List of possible nodes name
- *
+ * @param {Object} options
+ * @param {HTMLElement} options.target Target element
+ * @param {String} options.selectorString Any valid CSS selector string (class, id, attribute) with Element.matches()
+ * @param {(String|Array)} options.nodeName List of possible nodes name
  * @returns {Boolean} Is the target valid
  */
 export default function validateTarget({ target, selectorString, nodeName }) {

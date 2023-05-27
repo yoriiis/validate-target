@@ -1,6 +1,6 @@
 {
 	"name": "validate-target",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Easily validate target of an HTML element especially during event delegation",
 	"keywords": [
 		"validate target",
@@ -13,17 +13,20 @@
 	"repository": "https://github.com/yoriiis/validate-target.git",
 	"license": "MIT",
 	"author": "Joris DANIEL",
+	"type": "module",
 	"main": "src/index.js",
+	"files": [
+		"src"
+	],
 	"scripts": {
 		"build": "echo \"No build specified\" && exit 0",
-		"coverage": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
 		"test": "npm run test:markdown && npm run test:eslint && npm run test:unit",
-		"test:eslint": "eslint . --config ./config/.eslintrc.js",
+		"test:eslint": "eslint . --config ./config/.eslintrc.cjs",
 		"test:markdown": "markdownlint-cli2 '**/*.md' '.github/*.md'",
 		"test:unit": "jest --config config/jest.config.js --verbose --coverage",
 		"test:watch": "jest --config config/jest.config.js --watchAll --coverage"
 	},
-	"prettier": "./config/prettier.config.js",
+	"prettier": "./config/prettier.config.cjs",
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.21.8",
 		"@babel/preset-env": "^7.22.2",
