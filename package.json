@@ -23,14 +23,13 @@
 		"test": "npm run test:markdown && npm run test:eslint && npm run test:unit",
 		"test:eslint": "eslint . --config ./config/.eslintrc.cjs",
 		"test:markdown": "markdownlint-cli2 '**/*.md' '.github/*.md'",
-		"test:unit": "jest --config config/jest.config.js --verbose --coverage",
+		"test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --verbose --coverage",
 		"test:watch": "jest --config config/jest.config.js --watchAll --coverage"
 	},
 	"prettier": "./config/prettier.config.cjs",
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.21.8",
 		"@babel/preset-env": "^7.22.2",
-		"babel-jest": "^29.5.0",
 		"coveralls": "^3.1.1",
 		"eslint": "^8.39.0",
 		"eslint-config-prettier": "^8.8.0",
