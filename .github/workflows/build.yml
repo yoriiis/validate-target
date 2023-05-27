@@ -10,12 +10,4 @@ on:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        node-version: [16, 18, 20]
-        os: [ubuntu-latest, windows-latest, macos-latest]
     uses: yoriiis/actions/.github/workflows/test-and-build.yml@main
-    with:
-      node-version: ${{ matrix.node-version }}
-      os: ${{ matrix.os }}
-      command-build: npm run build && npm run build:example
