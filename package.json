@@ -1,6 +1,6 @@
 {
 	"name": "validate-target",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Easily validate target of an HTML element especially during event delegation",
 	"keywords": [
 		"validate target",
@@ -12,32 +12,39 @@
 	"bugs": "https://github.com/yoriiis/validate-target/issues",
 	"repository": "https://github.com/yoriiis/validate-target.git",
 	"license": "MIT",
-	"author": "Yoriiis aka Joris DANIEL",
+	"author": "Joris DANIEL",
+	"type": "module",
 	"main": "src/index.js",
+	"files": [
+		"src"
+	],
 	"scripts": {
-		"coverage": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
-		"test": "jest",
-		"test:coverage": "jest --coverage",
-		"test:eslint": "eslint -c ./.eslintrc.js .",
-		"test:markdown": "markdownlint '**/*.md' --ignore node_modules",
-		"test:watch": "jest --watch --coverage"
+		"build": "echo \"No build specified\" && exit 0",
+		"test": "npm run test:markdown && npm run test:eslint && npm run test:unit",
+		"test:eslint": "eslint . --config ./config/.eslintrc.cjs",
+		"test:markdown": "markdownlint-cli2 '**/*.md' '.github/*.md'",
+		"test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --verbose --coverage",
+		"test:watch": "jest --config config/jest.config.js --watchAll --coverage"
 	},
+	"prettier": "./config/prettier.config.cjs",
 	"devDependencies": {
-		"@babel/preset-env": "7.9.0",
-		"babel-eslint": "10.1.0",
-		"babel-plugin-dynamic-import-node": "2.3.0",
-		"coveralls": "3.0.11",
-		"eslint": "6.8.0",
-		"eslint-config-standard": "14.1.1",
-		"eslint-plugin-import": "2.20.1",
-		"eslint-plugin-node": "11.0.0",
-		"eslint-plugin-promise": "4.2.1",
-		"eslint-plugin-standard": "4.0.1",
+		"@babel/eslint-parser": "^7.21.8",
+		"@babel/preset-env": "^7.22.2",
+		"coveralls": "^3.1.1",
+		"eslint": "^8.39.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.7.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.1.1",
 		"jest": "29.5.0",
-		"markdownlint-cli": "0.22.0",
-		"prettier-eslint": "9.0.1"
+		"jest-environment-jsdom": "^29.5.0",
+		"markdownlint-cli2": "^0.7.1",
+		"prettier": "^2.8.7"
 	},
 	"engines": {
-		"node": ">=8.11.2"
+		"node": ">=16.20.0"
 	}
 }
