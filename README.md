@@ -21,6 +21,7 @@ yarn add validate-target --dev
 ```
 
 > **Warning** validate-target@3 is ESM.
+> 
 > **Note** Minimum supported `Node.js` version is `16.20.0`.
 
 ## Usage
