@@ -15,6 +15,7 @@
 	"author": "Joris DANIEL",
 	"main": "src/index.js",
 	"scripts": {
+		"build": "echo \"No build specified\" && exit 0",
 		"coverage": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
 		"test": "npm run test:markdown && npm run test:eslint && npm run test:unit",
 		"test:eslint": "eslint . --config ./config/.eslintrc.js",
