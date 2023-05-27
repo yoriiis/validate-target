@@ -10,7 +10,7 @@ The target can have multiple node name if element shares common code. The functi
 
 ## Installation
 
-The function is available as the `validate-target` package name on [npm](https://www.npmjs.com/package/validate-target) and [Github](https://github.com/yoriiis/validate-target).
+The library is available as the `validate-target` package name on [npm](https://www.npmjs.com/package/validate-target) and [Github](https://github.com/yoriiis/validate-target).
 
 ```bash
 npm install validate-target --save-dev
@@ -21,14 +21,14 @@ yarn add validate-target --dev
 ```
 
 > **Warning** validate-target@3 is ESM.
-> 
+>
 > **Note** Minimum supported `Node.js` version is `16.20.0`.
 
 ## Usage
 
 ### Basic usage
 
-The following example return `true` because `nodeName` and `selectorString` properties match.
+The following example returns `true` because the `nodeName` and `selectorString` properties match.
 
 ```html
 <a href="" class="itemLink">Link</a>
@@ -38,13 +38,13 @@ The following example return `true` because `nodeName` and `selectorString` prop
 validateTarget({
   target: document.querySelector('.itemLink'),
   selectorString: '.itemLink',
-  nodeName: ['a']
+  nodeName: 'a'
 });
 ```
 
 ### Multiple node names
 
-The following example return `true` because `button` is a granted value for `nodeName` and `selectorString` match ().
+The following example returns `true` because `button` is a matched value for `nodeName` and `selectorString`.
 
 ```html
 <a href="" class="itemLink">Link</a> <button class="itemButton">Button</button>
@@ -60,7 +60,7 @@ validateTarget({
 
 ### Event delegation
 
-The following example create a click event listener on the `nav` element and catch click events on `itemLink` element.
+The following example creates a click event listener on the `nav` element and intercepts click events on the `itemLink` element.
 
 ```html
 <nav class="nav">
@@ -83,7 +83,7 @@ document.querySelector('.nav').addEventListener('click', (e) => {
   const validateTargetLinkClick = validateTarget({
     target: e.target,
     selectorString: '.itemLink',
-    nodeName: ['a']
+    nodeName: 'a'
   });
 
   if (validateTargetLinkClick) {
@@ -96,23 +96,35 @@ document.querySelector('.nav').addEventListener('click', (e) => {
 
 ### `target`
 
-`HTMLElement`
+Type:
 
-Tells to the function the target.
+```ts
+type target = HTMLElement;
+```
+
+Tells to the function the target element.
 
 ### `selectorString`
 
-`String`
+Type:
 
-Tells to the function the selector string of the target element. Can be any valid CSS selector (class, id, attribute, etc.). The function uses `Element.matches` function.
+```ts
+type target = string;
+```
+
+Tells the function the selector string of the target element. Can be any valid CSS selector (class, id, attribute, etc.). The function uses the `Element.matches` function.
 
 ### `nodeName`
 
-`String || Array`
+Type:
 
-Tells to the function the node name in a string or a list of possible node names in an array. The order of the parameters in the array does not matter.
+```ts
+type target = string | string[];
+```
 
-## Licence
+Tells the function the node names. The order of the parameters in the array does not matter.
+
+## License
 
 `validate-target` is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 

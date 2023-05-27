@@ -24,7 +24,7 @@
 		"test:eslint": "eslint . --config ./config/.eslintrc.cjs",
 		"test:markdown": "markdownlint-cli2 '**/*.md' '.github/*.md'",
 		"test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --verbose --coverage",
-		"test:watch": "jest --config config/jest.config.js --watchAll --coverage"
+		"test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --watchAll --coverage"
 	},
 	"prettier": "./config/prettier.config.cjs",
 	"devDependencies": {

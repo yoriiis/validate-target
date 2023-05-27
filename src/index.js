@@ -12,9 +12,9 @@ export default function validateTarget({ target, selectorString, nodeName }) {
 	}
 
 	// Check if at least one of the nodeName is valid
-	if (Array.isArray(nodeName) && nodeName.length) {
-		return nodeName
-			.map((item) => target.nodeName.toLowerCase() === item && target.matches(selectorString))
-			.includes(true)
+	if (Array.isArray(nodeName)) {
+		return nodeName.some(
+			(item) => target.nodeName.toLowerCase() === item && target.matches(selectorString)
+		)
 	}
 }

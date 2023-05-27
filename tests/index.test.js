@@ -26,7 +26,7 @@ describe('validateTarget function', () => {
 		const result = validateTarget({
 			target: document.querySelector('.nav'),
 			selectorString: '.list-itemLink',
-			nodeName: ['a']
+			nodeName: 'a'
 		})
 		expect(result).toBe(false)
 	})
@@ -35,7 +35,7 @@ describe('validateTarget function', () => {
 		const result = validateTarget({
 			target: document.querySelector('.list-itemLink'),
 			selectorString: '.list-itemLink',
-			nodeName: ['a']
+			nodeName: 'a'
 		})
 		expect(result).toBe(true)
 	})
@@ -44,7 +44,7 @@ describe('validateTarget function', () => {
 		const result = validateTarget({
 			target: document.querySelector('.list-itemLink'),
 			selectorString: '[data-link]',
-			nodeName: ['a']
+			nodeName: 'a'
 		})
 		expect(result).toBe(true)
 	})
@@ -53,7 +53,7 @@ describe('validateTarget function', () => {
 		const result = validateTarget({
 			target: document.querySelector('.list-itemLink'),
 			selectorString: '#link',
-			nodeName: ['a']
+			nodeName: 'a'
 		})
 		expect(result).toBe(true)
 	})
@@ -73,6 +73,6 @@ describe('validateTarget function', () => {
 			selectorString: '[data-link]',
 			nodeName: []
 		})
-		expect(result).toBe(undefined)
+		expect(result).toBe(false)
 	})
 })
