@@ -75,4 +75,13 @@ describe('validateTarget function', () => {
 		})
 		expect(result).toBe(false)
 	})
+
+	it('should init the validateTarget function with nodeName not an array', () => {
+		const result = validateTarget({
+			target: document.querySelector('.list-itemLink'),
+			selectorString: '[data-link]',
+			nodeName: false
+		})
+		expect(result).toBe(undefined)
+	})
 })
