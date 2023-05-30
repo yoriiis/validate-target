@@ -1,7 +1,7 @@
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { jest } from '@jest/globals'
 
-const validateTarget = (await import('../src/index.js')).default
+const validateTarget = (await import('../src/index')).default
 
 beforeEach(() => {
 	document.body.innerHTML = `
@@ -85,6 +85,6 @@ describe('validateTarget function', () => {
 			selectorString: '[data-link]',
 			nodeName: false
 		})
-		expect(result).toBe(undefined)
+		expect(result).toBe(false)
 	})
 })
