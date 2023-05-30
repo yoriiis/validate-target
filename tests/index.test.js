@@ -1,4 +1,6 @@
-import validateTarget from '../src/index.js'
+import { jest } from '@jest/globals'
+
+const validateTarget = (await import('../src/index.js')).default
 
 beforeEach(() => {
 	document.body.innerHTML = `
