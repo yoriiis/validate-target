@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.1.0
+
+### Updates
+
+- Transform to TypeScript ([#14](https://github.com/yoriiis/validate-target/pull/14))
+
 ## 3.0.0
 
 ### ⚠️ Breaking changes

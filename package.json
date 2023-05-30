@@ -1,6 +1,6 @@
 {
 	"name": "validate-target",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "Easily validate target of an HTML element especially during event delegation",
 	"keywords": [
 		"validate target",
