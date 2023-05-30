@@ -16,9 +16,7 @@ export default function validateTarget({
 }): boolean {
 	nodeName = ([] as string[]).concat(nodeName)
 
-	return (
-		nodeName.some(
-			(item) => target.nodeName.toLowerCase() === item && target.matches(selectorString)
-		) ?? false
+	return nodeName.some(
+		(item) => target.nodeName.toLowerCase() === item && target.matches(selectorString)
 	)
 }
