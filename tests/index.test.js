@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { jest } from '@jest/globals'
 
 const validateTarget = (await import('../src/index.js')).default
