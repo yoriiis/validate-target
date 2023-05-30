@@ -24,7 +24,17 @@ yarn add validate-target --dev
 >
 > **Note** Minimum supported `Node.js` version is `16.20.0`.
 
-## Usage
+### CDN
+
+You can also download it and include it with a script tag. The library will be registered as the global variable `window.validateTarget`.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/validate-target@3" crossorigin></script>
+```
+
+> **Note** You can browse the source of the NPM package at [jsdelivr.com/package/npm/validate-target](https://www.jsdelivr.com/package/npm/validate-target).
+
+## How it works
 
 ### Basic usage
 
@@ -34,7 +44,7 @@ The following example returns `true` because the `nodeName` and `selectorString`
 <a href="" class="itemLink">Link</a>
 ```
 
-```javascript
+```js
 validateTarget({
   target: document.querySelector('.itemLink'),
   selectorString: '.itemLink',
@@ -50,7 +60,7 @@ The following example returns `true` because `button` is a matched value for `no
 <a href="" class="itemLink">Link</a> <button class="itemButton">Button</button>
 ```
 
-```javascript
+```js
 validateTarget({
   target: document.querySelector('.itemLink'),
   selectorString: '.itemLink',
@@ -78,7 +88,7 @@ The following example creates a click event listener on the `nav` element and in
 </nav>
 ```
 
-```javascript
+```js
 document.querySelector('.nav').addEventListener('click', (e) => {
   const validateTargetLinkClick = validateTarget({
     target: e.target,
@@ -91,6 +101,8 @@ document.querySelector('.nav').addEventListener('click', (e) => {
   }
 });
 ```
+
+---
 
 ## Parameters
 
