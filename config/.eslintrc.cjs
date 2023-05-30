@@ -1,5 +1,5 @@
 module.exports = {
-	parser: '@babel/eslint-parser',
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		requireConfigFile: false,
 		ecmaVersion: 6,
@@ -17,7 +17,7 @@ module.exports = {
 		jest: true
 	},
 
-	extends: ['standard', 'plugin:prettier/recommended'],
+	extends: ['standard', 'plugin:prettier/recommended', 'plugin:@typescript-eslint/recommended'],
 
 	rules: {
 		indent: ['error', 'tab', { ignoredNodes: ['TemplateLiteral *'], SwitchCase: 1 }],
@@ -26,6 +26,9 @@ module.exports = {
 			'error',
 			{ anonymous: 'always', named: 'never', asyncArrow: 'always' }
 		],
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'@typescript-eslint/no-var-requires': 'off',
+		'@typescript-eslint/no-explicit-any': 'off',
 		'linebreak-style': ['error', 'unix']
 	},
 
