@@ -7,7 +7,7 @@ export default {
 	testMatch: ['<rootDir>/tests/*.test.js'],
 	rootDir: '../',
 	transform: {
-		'\\.(js|ts)$': ['ts-jest', { configFile: './config/babel.config.js', useESM: true }]
+		'\\.(js|ts)$': 'ts-jest'
 	},
 	testEnvironment: 'jsdom',
 	resetModules: true,

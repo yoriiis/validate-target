@@ -14,7 +14,8 @@
 	"license": "MIT",
 	"author": "Joris DANIEL",
 	"type": "module",
-	"exports": "lib/index.js",
+	"exports": "./lib/index.js",
+	"types": "./types/index.d.ts",
 	"files": [
 		"lib",
 		"types"
@@ -22,9 +23,9 @@
 	"scripts": {
 		"build": "rm -rf ./types ./lib && tsc",
 		"dev": "tsc --watch",
+		"dev:unit": "jest --config config/jest.config.js --watchAll --coverage",
 		"test": "npm run test:unit",
-		"test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --verbose --coverage",
-		"test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --watchAll --coverage"
+		"test:unit": "jest --config config/jest.config.js --verbose --coverage"
 	},
 	"prettier": "./config/prettier.config.cjs",
 	"devDependencies": {

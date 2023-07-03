@@ -1,7 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { jest } from '@jest/globals'
-
-const validateTarget = (await import('../src/index')).default
+import validateTarget from '../src/index'
 
 beforeEach(() => {
 	document.body.innerHTML = `
