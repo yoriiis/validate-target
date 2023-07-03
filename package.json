@@ -22,7 +22,7 @@
 	"scripts": {
 		"build": "rm -rf ./types ./lib && tsc",
 		"dev": "tsc --watch",
-		"test": "npm run test:unit && npm run test:types",
+		"test": "npm run test:unit",
 		"test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --verbose --coverage",
 		"test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config config/jest.config.js --watchAll --coverage"
 	},
