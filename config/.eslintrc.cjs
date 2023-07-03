@@ -35,5 +35,7 @@ module.exports = {
 	globals: {
 		document: false,
 		window: false
-	}
+	},
+
+	ignorePatterns: ['node_modules', 'lib', 'types']
 }
