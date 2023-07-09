@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.1.1
+
+### Fix
+
+- Fix package `exports` ([a3e59ee](https://github.com/yoriiis/validate-target/commit/a3e59eee7cc1381cf0e790e28dbedd4b34d979b1))
+
 ## 3.1.0
 
 ### Updates
