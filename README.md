@@ -24,7 +24,7 @@ yarn add validate-target --dev
 >
 > **Note** Minimum supported `Node.js` version is `16.20.0`.
 
-### CDN
+### CDN test
 
 You can also download it and include it with a script tag. The library will be registered as the global variable `window.validateTarget`.
 
