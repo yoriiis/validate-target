@@ -14,7 +14,12 @@
 	"license": "MIT",
 	"author": "Joris DANIEL",
 	"type": "module",
-	"exports": "./lib/index.js",
+	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"import": "./lib/index.js"
+		}
+	},
 	"types": "./types/index.d.ts",
 	"files": [
 		"lib",
