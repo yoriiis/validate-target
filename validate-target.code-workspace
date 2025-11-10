@@ -5,13 +5,26 @@
 		}
 	],
 	"settings": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.defaultFormatter": "biomejs.biome",
 		"[javascript][typescript][postcss][html][markdown][json]": {
 			"editor.formatOnSave": true,
 			"editor.tabSize": 4,
 			"editor.rulers": [100]
 		},
-        "[yaml]": {
+		"[javascript][typescript][typescriptreact][postcss][html][markdown][json]": {
+			"editor.formatOnSave": true
+		},
+		"[html][markdown]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.wordWrap": "off"
+		},
+		"[javascript][typescript][typescriptreact][css][json][jsonc]": {
+			"editor.codeActionsOnSave": {
+				"quickfix.biome": "explicit",
+				"source.organizeImports.biome": "explicit"
+			}
+		},
+		"[yaml]": {
 			"editor.tabSize": 2,
 			"editor.detectIndentation": true,
 			"editor.insertSpaces": true,
@@ -22,7 +35,7 @@
 			"*.html": "html",
 			"*.ts": "typescript",
 			"*.json": "json",
-            "*.yaml": "yaml",
+			"*.yaml": "yaml",
 			"*.yml": "yaml"
 		},
 		"files.trimTrailingWhitespace": true,
@@ -32,10 +45,6 @@
 		"files.eol": "\n"
 	},
 	"extensions": {
-		"recommendations": [
-			"davidanson.vscode-markdownlint",
-			"esbenp.prettier-vscode",
-			"dbaeumer.vscode-eslint"
-		]
-	},
+		"recommendations": ["davidanson.vscode-markdownlint", "biomejs.biome", "esbenp.prettier-vscode"]
+	}
 }
