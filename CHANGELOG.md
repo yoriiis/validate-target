@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 4.0.0
+
+### ⚠️ Breaking changes
+
+- Minimum supported `Node.js` version is `22` ([#22](https://github.com/yoriiis/validate-target/pull/22))
+
 ## 3.1.1
 
 ### Fix
