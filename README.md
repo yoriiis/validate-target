@@ -22,14 +22,14 @@ yarn add validate-target --dev
 
 > **Warning** validate-target@3 is ESM.
 >
-> **Note** Minimum supported `Node.js` version is `16.20.0`.
+> **Note** Minimum supported `Node.js` version is `22`.
 
 ### CDN
 
 You can also download it and include it with a script tag. The library will be registered as the global variable `window.validateTarget`.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/validate-target@3" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/validate-target@4" crossorigin></script>
 ```
 
 > **Note** You can browse the source of the NPM package at [jsdelivr.com/package/npm/validate-target](https://www.jsdelivr.com/package/npm/validate-target).
@@ -41,7 +41,7 @@ You can also download it and include it with a script tag. The library will be r
 The following example returns `true` because the `nodeName` and `selectorString` properties match.
 
 ```html
-<a href="" class="itemLink">Link</a>
+<a href="#" class="itemLink">Link</a>
 ```
 
 ```js
@@ -101,6 +101,9 @@ document.querySelector('.nav').addEventListener('click', (e) => {
   }
 });
 ```
+
+> [!NOTE]
+> If the element contains other children and these should not be selectable, add the CSS property `pointer-events: none` on all these children.
 
 ---
 
